@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Profile page</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gabriela|Tillana" rel="stylesheet">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+		<script src="javaScript/scroll.js"></script>
+		<script src="javaScript/contactForm.js"></script>
+				
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+		<!-- Navbar-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>                        
+		      </button>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#home"><i class="fa fa-home fa-lg" aria-hidden="true"></i>&nbsp; Home</a></li>
+				<li><a href="#about"><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; About me</a></li>
+				<li><a href="#skills"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>&nbsp; Skills</a></li>
+				<li><a href="#education"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>&nbsp; Education</a></li>
+				<li><a href="#my-works"><i class="fa fa-briefcase fa-lg" aria-hidden="true"></i>&nbsp; My works</a></li>
+				<li><a href="#contact"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i>&nbsp; Contact</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+				
+		<!--First Container-->
+		<section class="one-section">
+			<div class="container-fluid bg-5 text-center" id="home">
+				<div class="row text-center">
+					<div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8 welcome-text">
+						<h1>Welcome</h1>
+					</div>
+				</div>
+					<h3>I'm begginer developer. This project used HTML5, CSS3, JavaScript, JQuery, AJAX, Bootstrap</h3>
+					<form action="Galina_Brenvald_Resume_JS.PDF">
+						<button class="btn btn-default btn-link btn-lg download" type="submit"><i class="fa fa-download fa-lg" aria-hidden="true"></i>&nbsp; Download CV</button>
+					</form>
+			</div>
+		</section>
+
+		<!-- Second Container -->
+		<section class="two-section">
+			<div class="container-fluid bg-2" id="about">
+		 		<div class="row slideanim">
+		 			<div class="caption">
+			 			<h3 class="margin text-center">About me</h3>
+			 			<hr>
+					</div>
+
+					<div class="col-md-4 col-sm-4">
+						<div class="left-service-item">
+							<img src = "images/user.png" class="img-responsive fav-information"/>
+							  	<label>
+								  	<h2>Full name</h2>
+								  	<p>Brenvald Galina</p>
+							  	</label>
+						</div>
+		  		
+						<div class="left-service-item">
+							<img src = "images/gift.png" class="img-responsive fav-information"/>
+							  	<label>
+								  	<h2>Birthday</h2>
+								  	<p>26 march, 1983</p>
+							  	</label>
+						</div>
+
+						<div class="left-service-item">
+							<img src = "images/map-marker.png" class="img-responsive fav-information"/>
+							  	<label>
+								  	<h2>Birth Place</h2>
+								  	<p>Kharkov, Ukraine</p>
+							  	</label>
+						</div>
+		  			</div>
+		  			
+					<div class="col-md-4 col-sm-4"> 
+		    			<img src="images/myfoto.jpg" class="img-responsive img-circle margin my_foto" alt="Image">
+					</div>
+
+					<div class="col-md-4 col-sm-4"> 
+		  				<div class="right-service-item">
+							<img src = "images/address.png" class="img-responsive fav-information "/>
+							  	<label>
+								  	<h2>Address</h2>
+								  	<p>Kharkov, Ukraine</p>
+							  	</label>
+						</div>
+		  		
+						<div class="right-service-item">
+							<img src = "images/phone.png" class="img-responsive fav-information"/>
+							  	<label>
+								  	<h2>Phone</h2>
+								  	<p>+38(066)455-35-61</p>
+							  	</label>
+						</div>
+
+						<div class="right-service-item">
+							<img src = "images/email.png" class="img-responsive fav-information"/>
+							  	<label>
+								  	<h2>Email address</h2>
+								  	<p>galina.brenvald@gmail.com</p>
+							  	</label>
+						</div>
+		  			</div>
+		  		</div>
+			</div>
+		</section>
+
+		<!-- Third Container -->
+		<section class="three-section">
+			<div class="container-fluid bg-1"></div>
+		</section>
+
+		<!-- Fourth Container -->
+		<section class="four-section">
+			<div class="container-fluid bg-3 text-center" id="skills">  
+				<div class="caption">  
+			  		<h3 class="margin">Skills</h3>
+			  		<hr>
+		  		</div>
+
+				<div class="row slideanim">
+		    		<div class="col-sm-4 col-xs-4">
+		      			<img src = "images/skills/html.png"/>		      				
+		       		</div>
+
+		    		<div class="col-sm-4 col-xs-4">
+		      			<img src = "images/skills/css.png"/>		      
+		    		</div>
+
+		    		<div class="col-sm-4 col-xs-4">
+		     			<img src = "images/skills/js.png"/>		      				
+		          	</div>
+		    	</div>
+
+		  		<div class="row slideanim skills">
+		    		<div class="col-sm-4 col-xs-4">
+			      		<img src = "images/skills/AJAX.png"/>			      			
+		        	</div>
+
+		   			<div class="col-sm-4 col-xs-4">
+		      			<img src = "images/skills/bs.png"/>		      				
+		          	</div>
+
+		    		<div class="col-sm-4 col-xs-4">
+		      			<img src = "images/skills/jq.png"/>		      				
+		       		</div>
+		  		</div>
+			</div>
+		</section>
+
+		<!-- Fifth Container -->
+		<section class="five-section">
+			<div class="container-fluid bg-5"></div>
+		</section>
+
+		<!-- Sixth Container -->
+		<section class="six-section">
+			<div class="container-fluid bg-3" id="education">
+		 		<div class="row slideanim">
+		 			<div class="caption">
+			 			<h3 class="margin text-center">Education</h3>
+						<hr>
+					</div>
+
+					<div class="col-md-offset-2 col-xs-offset-2 col-md-2 col-xs-2 book">
+						<img src = "images/book-open-page.png" id="book-open"/>
+					</div>
+
+					<div class="col-md-8 col-xs-8">
+						<h2>Sep 2000-Jun 2005</h2>
+						<h2>Simon Kuznets Kharkiv National University of Economics</h2>
+						<p>Finance Department</p>
+						<p>Speciality Banking</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Seventh Container -->
+		<section class="seven-section">
+			<div class="container-fluid bg-2 text-center" id="my-works">		 		
+		 			<div class="caption">
+			 			<h3 class="margin">My works</h3>
+			 			<hr>
+			 			<p>Take a look at some of my projects.</p>
+		 			</div>
+		 		<div class="row">
+					<div class= "col-sm-5 col-md-offset-1 col-md-4 slideanim">
+						<a href="credit_card/index.html" target="_blank"><img src="images/myWorksValidator.jpg" class="img-rounded img-works"/></a>
+						<p class="description">The LUHN formula is used to generate or validate and verify the accuracy of credit-card numbers.
+						Most credit cards contain a check digit, which is the digit at the end of the credit card number. 
+						The first part of the credit-card number identifies the type of credit card (Visa, MasterCard, American Express, etc.). To generate the check digit, the LUHN formula is applied to the number. This was implemented in JavaScript.</p>
+
+						<button class="btn btn-default btn-sm check" onClick='window.open("credit_card/index.html", "_blank")'>Check it out</button>
+	    			</div>
+
+	    			<div class="col-sm-offset-2 col-sm-5 col-md-4 slideanim">
+						<a href="cred_calculator/index.html" target="_blank"><img src="images/myWorksCalculator.jpg" class="img-rounded img-works" id="img-calculator"/></a>
+						<p class="description">This loan calculator will help you determine the monthly payments on a loan. Simply enter the loan amount, term and interest rate in the fields below and click calculate. This calculator can be used for mortgage, auto, or any other fixed loan types. HTML and CSS used to generate the user interface. HTML-form and javascript - to perform data input and output operations of calculating the results.</p>
+
+						<button class="btn btn-default btn-sm check" onClick='window.open("cred_calculator/index.html", "_blank")'>Check it out</button>
+	    			</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Eighth Container -->
+		<section class="eight-section">
+			<div class="container-fluid bg-5" id="contact">
+				<div class="caption">
+					<h3 class="margin text-center">Contact</h3>
+					<hr>
+				</div>
+
+		 			<div class="row slideanim">
+	    				<div class="col-sm-5 contactInformation">
+	      						<p><span class="glyphicon glyphicon-map-marker"></span>&nbsp; Ukraine, Kharkov</p>
+								<p><span class="glyphicon glyphicon-phone"></span>&nbsp; +38(066)455-35-61</p>
+								<p><span class="glyphicon glyphicon-envelope"></span>&nbsp; galina.brenvald@gmail.com</p> 
+	    				</div>
+	    				
+	    				<div class="col-sm-7">
+	    					<form name="contactForm" id="contactForm" onsubmit="return false">
+		      					<div class="row slideanim"> 
+		      							<div class="col-sm-6 form-group">
+			        						<input class="form-control" id="name" name="name" placeholder="Name" type="text">
+			        					</div>
+
+			        					<div class="col-sm-6 form-group">
+			        						<input class="form-control" id="email" name="email" placeholder="Email" type="email">
+			        					</div>
+		      					</div>
+	      						<textarea class="form-control slideanim" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+	      					
+		      					<div class="row">
+		        					<div class="col-sm-12 form-group">
+		          						<button class="btn btn-default pull-right" type="submit" name="submit" id="btn-submit">Send</button>
+		        					</div>
+								</div> 
+	      					</form>
+	    				</div>
+	    			</div>
+
+					<div class="modal" id="modal">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button class="close" type="button" data-dismiss="modal" id="btn_close">&times;</button>
+								</div>
+								<div class="modal-body" id="modal_body"></div>
+								<div class="modal-footer">
+									<button class="btn btn-warning" type="button" data-dismiss="modal" id="btn_confirm">OK</button>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</section>
+
+		<!-- Ninth container -->
+		<footer class="container-fluid bg-4 text-center" id="footer">
+			<a href="#myPage" title="To Top"><img src = "images/arrow-up.png"/></a>
+		</footer>
+	</body>
+</html>
+
+

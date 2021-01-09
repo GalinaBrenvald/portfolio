@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Credit_calculator</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="javaScript/calculation.js"></script>
+		<script src="javaScript/javaScript_style.js"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse"></nav>
+
+		<div class="container banner text-center">
+		   	<h2>Кредитный калькулятор</h2>
+	    </div>
+
+		<div class="container">
+			<div class="row content">
+				<div class = "col-md-6">
+					<form class="form-horizontal" id="calculator" name="credit">
+						<div class="form-group">
+				        	<label class="col-xs-6 control-label">Сумма кредита:<sup class="obligatory-field">*</sup></label>
+				        		<div class="col-xs-5">
+				            		<input class="form-control control" id="sum" name="sum" maxlength="9">
+				                </div>
+				    	</div>
+
+				    	<div class="form-group">
+				        	<label class="col-xs-6 control-label">Срок кредита (мес.):<sup class="obligatory-field">*</sup></label>
+				        		<div class="col-xs-5">
+				            		<input class="form-control control" id="term" name="term" maxlength="3">
+								</div>
+				    	</div>
+
+				    	<div class="form-group">
+				        	<label class="col-xs-6 control-label">Процентная ставка:<sup class="obligatory-field">*</sup></label>
+				        		<div class="col-xs-5">
+				            		<input class="form-control control" id="percent" name="percent" maxlength="3">
+				                </div>
+				    	</div>
+
+				    	<div class="form-group">
+				        	<label class="col-xs-6 control-label">Первоначальный взнос:</label> 
+				        		<div class="col-xs-5">
+				            		<input class="form-control control" id="initial" name="initial" maxlength="9">
+				                </div>
+				    	</div>
+
+				    	<div class="form-group">
+					        <div class="col-xs-offset-4 col-xs-8  btn-payment">
+					         	<input type="button" class="btn btn-default"  value="Рассчитать" onclick="calculatePayment()" id="btn-calculate">
+					            <input type="button" class="btn btn-default"  value="Сбросить" onclick="resetForm()" id="btn-reset">
+					        </div>
+				    	</div>
+				    </form>
+						<div id="message">
+							<h5 class="text-center">Заполните поля формы</h5>
+						</div>
+						<div id="error_message">
+							<h5 class="text-center">Введите другую сумму кредита</h5>
+						</div>
+				</div>
+
+				<div class="col-md-6" id="content">
+					<p>Кредитный калькулятор основан на формуле расчёта Аннуитетных платежей.</p>
+					<p>Аннуитетный платеж – вариант ежемесячного платежа по кредиту, когда размер ежемесячного платежа остаётся постоянным на всём периоде кредитования.</p>
+					<p>Ежемесячный платёж, при аннуитетной схеме погашения кредита состоит из двух частей. Первая часть платежа идёт на погашение процентов за пользование кредитом. Вторая часть идёт на погашение долга. При аннуитетной схеме выплат по кредиту, ежемесячный платёж рассчитывается как сумма процентов, начисленных на текущий период и суммы идущей на погашения суммы кредита.</p>
+					<p>Для расчёта размера ежемесячного платежа можно воспользоваться кредитным калькулятором. С помощью калькулятора кредитов можно определить размер начисленных процентов, а так же сумму, идущую на погашение долга.</p>
+					<p>Аннуитетный платеж расчитывается по следующей формуле:</p> 
+					<img src="images/formula_annuitet.png" alt="formula" id="formula"/>
+					<p>Где:</p>
+					<ul>
+						<li>x – месячный платёж,</li>
+						<li>S – первоначальная сумма кредита,</li> 
+						<li>P – (1/12) процентной ставки,</li> 
+						<li>N – количество месяцев.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row grafic-payment">
+				<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 text-center">
+					<table class="table table-striped" id="grafic">
+					<caption class="text-center">График платежей</caption>
+	  					<tr>
+		  					<th>Месяц</th>
+	  						<th>Остаток по кредиту</th>
+		  					<th>Тело</th>
+		  					<th>Проценты</th>
+							<th>Ежемесячный платеж</th>
+	  					</tr>
+	  				</table>
+  				</div>
+  			</div>
+  		</div>
+    </body>
+</html>
